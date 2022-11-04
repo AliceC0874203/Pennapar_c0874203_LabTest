@@ -30,21 +30,21 @@
                                     <constraint firstAttribute="height" constant="500" id="yxa-gU-4xn"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bUW-Ua-yQu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LapTimeTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LapTimeTableViewCell" id="bUW-Ua-yQu" customClass="LapTimeTableViewCell" customModule="Pennapar_c0874203_LabTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="328" height="42.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bUW-Ua-yQu" id="SPK-pz-a8u">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="42.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ju1-D1-QSD">
-                                                    <rect key="frame" x="29.000000000000004" y="11.000000000000002" width="41.333333333333343" height="20.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ju1-D1-QSD">
+                                                    <rect key="frame" x="29" y="11.000000000000002" width="71" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybh-mF-6HA">
-                                                    <rect key="frame" x="276.66666666666669" y="0.0" width="41.333333333333314" height="42.666666666666664"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lap 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybh-mF-6HA">
+                                                    <rect key="frame" x="268" y="0.0" width="40" height="42.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,12 +55,20 @@
                                                 <constraint firstItem="Ju1-D1-QSD" firstAttribute="top" secondItem="SPK-pz-a8u" secondAttribute="topMargin" id="AKg-mN-PmQ"/>
                                                 <constraint firstItem="ybh-mF-6HA" firstAttribute="top" secondItem="SPK-pz-a8u" secondAttribute="top" id="CRz-uN-BuN"/>
                                                 <constraint firstItem="Ju1-D1-QSD" firstAttribute="leading" secondItem="SPK-pz-a8u" secondAttribute="leadingMargin" constant="9" id="NlZ-gM-35l"/>
-                                                <constraint firstAttribute="trailing" secondItem="ybh-mF-6HA" secondAttribute="trailing" constant="10" id="dQX-HE-m7A"/>
+                                                <constraint firstAttribute="trailing" secondItem="ybh-mF-6HA" secondAttribute="trailing" constant="20" id="dQX-HE-m7A"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ju1-D1-QSD" secondAttribute="bottom" id="hyn-Hp-CHk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labNoLabel" destination="ybh-mF-6HA" id="rqg-Og-3Gx"/>
+                                            <outlet property="timeLabel" destination="Ju1-D1-QSD" id="dCM-OE-kJ1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tCH-8C-ORx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WMx-Zq-O9z"/>
+                                </connections>
                             </tableView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3BD-w6-cjw">
                                 <rect key="frame" x="0.0" y="769" width="393" height="49"/>

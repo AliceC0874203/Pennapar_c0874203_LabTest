@@ -66,9 +66,23 @@ class ViewController: UIViewController {
     @IBAction func lapAndResetAction(_ sender: UIButton) {
         if sender.titleLabel?.text == "Lap" {
             lapTimeStamp.append(timingLabel.text ?? "00:00:00")
+            tableView.reloadData()
         } else {
             resetTimer()
         }
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        lapTimeStamp.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LapTimeTableViewCell", for: indexPath) as? LapTimeTableViewCell
+        cell?.timeLabel.text = lapTimeStamp[indexPath.row]
+        cell?.labNoLabel.text = "Lap \(indexPath.row)"
+        return cell ?? UITableViewCell()
     }
 }
 
