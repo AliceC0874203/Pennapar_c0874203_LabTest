@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     func runTimer() {
         startTimerButton.setTitle("Stop", for: .normal)
+        lapButton.setTitle("Lap", for: .normal)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
     
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         timingLabel.text = timeToString(time: TimeInterval(seconds))
         lapButton.setTitle("Lap", for: .normal)
         lapTimeStamp.removeAll()
+        tableView.reloadData()
     }
     
     @objc func updateTimer() {
