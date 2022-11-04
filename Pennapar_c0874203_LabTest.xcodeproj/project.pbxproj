@@ -14,6 +14,7 @@
 		99214F362915C8BE00E3AC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99214F352915C8BE00E3AC3F /* Assets.xcassets */; };
 		99214F392915C8BE00E3AC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99214F372915C8BE00E3AC3F /* LaunchScreen.storyboard */; };
 		99214F412915D33300E3AC3F /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99214F402915D33300E3AC3F /* LapTimeTableViewCell.swift */; };
+		99214F432915DD8B00E3AC3F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99214F422915DD8B00E3AC3F /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		99214F382915C8BE00E3AC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99214F3A2915C8BE00E3AC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99214F402915D33300E3AC3F /* LapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTableViewCell.swift; sourceTree = "<group>"; };
+		99214F422915DD8B00E3AC3F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,12 @@
 				99214F2C2915C8BC00E3AC3F /* AppDelegate.swift */,
 				99214F2E2915C8BC00E3AC3F /* SceneDelegate.swift */,
 				99214F302915C8BC00E3AC3F /* ViewController.swift */,
+				99214F402915D33300E3AC3F /* LapTimeTableViewCell.swift */,
+				99214F422915DD8B00E3AC3F /* TimerViewController.swift */,
 				99214F322915C8BC00E3AC3F /* Main.storyboard */,
 				99214F352915C8BE00E3AC3F /* Assets.xcassets */,
 				99214F372915C8BE00E3AC3F /* LaunchScreen.storyboard */,
 				99214F3A2915C8BE00E3AC3F /* Info.plist */,
-				99214F402915D33300E3AC3F /* LapTimeTableViewCell.swift */,
 			);
 			path = Pennapar_c0874203_LabTest;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99214F432915DD8B00E3AC3F /* TimerViewController.swift in Sources */,
 				99214F412915D33300E3AC3F /* LapTimeTableViewCell.swift in Sources */,
 				99214F312915C8BC00E3AC3F /* ViewController.swift in Sources */,
 				99214F2D2915C8BC00E3AC3F /* AppDelegate.swift in Sources */,
