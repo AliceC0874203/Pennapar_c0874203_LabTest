@@ -158,6 +158,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="He7-yh-uHK" eventType="touchUpInside" id="kFL-wM-dXX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU7-Wq-dHX">
                                         <rect key="frame" x="180" y="0.0" width="150" height="150"/>
@@ -185,7 +188,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yZ-tT-N3a">
                                 <rect key="frame" x="0.0" y="79" width="393" height="216"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krS-Iw-w05">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krS-Iw-w05">
                                 <rect key="frame" x="60.333333333333343" y="189" width="272.66666666666663" height="81.666666666666686"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
                                 <nil key="textColor"/>
@@ -208,7 +211,6 @@
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="cancelButton" destination="6AF-cn-QUS" id="W4s-gM-Zq2"/>
                         <outlet property="countDownTimeLabel" destination="krS-Iw-w05" id="3Qr-cW-7P2"/>
                         <outlet property="startButton" destination="mU7-Wq-dHX" id="Y01-si-crn"/>
                         <outlet property="timePicker" destination="2yZ-tT-N3a" id="nX5-E0-iYI"/>

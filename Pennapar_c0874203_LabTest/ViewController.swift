@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     func resetTimer() {
         seconds = 0.0
-        timingLabel.text = timeToString(time: TimeInterval(seconds))
+        timingLabel.text = "0.0"
         lapButton.setTitle("Lap", for: .normal)
         lapTimeStamp.removeAll()
         tableView.reloadData()
@@ -46,15 +46,8 @@ class ViewController: UIViewController {
     
     @objc func updateTimer() {
         seconds += 1.0
-        timingLabel.text = timeToString(time: TimeInterval(seconds))
+        timingLabel.text = Utilities.timeToString(time: TimeInterval(seconds))
         print(lapTimeStamp)
-    }
-    
-    func timeToString(time: TimeInterval) -> String {
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        return String(format: "%02i:%02i.%02i", hours, minutes, seconds)
     }
 
     @IBAction func controlTimeAction(_ sender: UIButton) {
