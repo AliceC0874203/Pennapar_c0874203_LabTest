@@ -16,6 +16,7 @@
 		99214F412915D33300E3AC3F /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99214F402915D33300E3AC3F /* LapTimeTableViewCell.swift */; };
 		99214F432915DD8B00E3AC3F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99214F422915DD8B00E3AC3F /* TimerViewController.swift */; };
 		99214F452915E04A00E3AC3F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99214F442915E04A00E3AC3F /* Utilities.swift */; };
+		99214F472915E7DE00E3AC3F /* IOS_Alarm_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 99214F462915E7DE00E3AC3F /* IOS_Alarm_bell.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		99214F402915D33300E3AC3F /* LapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		99214F422915DD8B00E3AC3F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		99214F442915E04A00E3AC3F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		99214F462915E7DE00E3AC3F /* IOS_Alarm_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IOS_Alarm_bell.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				99214F372915C8BE00E3AC3F /* LaunchScreen.storyboard */,
 				99214F3A2915C8BE00E3AC3F /* Info.plist */,
 				99214F442915E04A00E3AC3F /* Utilities.swift */,
+				99214F462915E7DE00E3AC3F /* IOS_Alarm_bell.mp3 */,
 			);
 			path = Pennapar_c0874203_LabTest;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99214F392915C8BE00E3AC3F /* LaunchScreen.storyboard in Resources */,
+				99214F472915E7DE00E3AC3F /* IOS_Alarm_bell.mp3 in Resources */,
 				99214F362915C8BE00E3AC3F /* Assets.xcassets in Resources */,
 				99214F342915C8BC00E3AC3F /* Main.storyboard in Resources */,
 			);

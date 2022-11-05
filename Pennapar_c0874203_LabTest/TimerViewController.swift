@@ -17,6 +17,7 @@ class TimerViewController: UIViewController {
     
     var seconds = 0.0
     var timer = Timer()
+    var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +52,16 @@ class TimerViewController: UIViewController {
         if seconds <= 0 {
             pasueTimer()
             showAlert()
+            startAlertSound()
         }
     }
     
     func showAlert() {
         let alert = UIAlertController(title: "Alert", message: "TIME OUT", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Click", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.audioPlayer?.stop()
+        }))
         present(alert, animated: true, completion: nil)
     }
     
@@ -65,6 +70,21 @@ class TimerViewController: UIViewController {
             runTimer()
         } else {
             pasueTimer()
+        }
+    }
+    
+    func startAlertSound() {
+        if let bundle = Bundle.main.path(forResource: "IOS_Alarm_bell", ofType: "mp3") {
+            let backgroundMusic = NSURL(fileURLWithPath: bundle)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)
+                guard let audioPlayer = audioPlayer else { return }
+                audioPlayer.numberOfLoops = -1 // for infinite times
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+            } catch {
+                print(error)
+            }
         }
     }
 }
